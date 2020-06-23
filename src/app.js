@@ -15,7 +15,7 @@ const repositories = [];
 
 function validadeRepositoryId(request, response, next){
   const { id } = request.params;
-  console.log('asdsadasd')
+
   if (!isUuid(id)) {
     return response.status(400).json({ error: "Invalid repository id" })  
   }
